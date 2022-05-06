@@ -13,27 +13,31 @@ export default function Babysisterdetail() {
       console.log(res.data);
     });
   };
-  useEffect(function () {
-    fetchdata();
-  }, []);
+  useEffect(
+    function () {
+      fetchdata();
+    },
+    [id]
+  );
   return (
     <div class="content">
       <div class="card">
         {console.log(bsdata.name)}
         <div class="firstinfo">
-          <img src={require("./Components/profilepic.jpeg")} />
+          <img src={require("./Components/ninera.png")} />
           <div class="profileinfo">
             <h1>
               {bsdata.name} {bsdata.last_name}
             </h1>
             <h3>Niñera</h3>
+            <p class="bio">Documento: {bsdata.document}</p>
             <p class="bio">Telefono: {bsdata.phone}</p>
             <p class="bio">Cumpleaños: {bsdata.date_b}</p>
           </div>
         </div>
       </div>
       <div class="badgescard">
-        <span ></span>
+        <span></span>
       </div>
     </div>
   );

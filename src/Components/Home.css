@@ -1,15 +1,13 @@
-
 @import "efecto.css";
 
-.titulo{
-  font-family: 'Montserrat', sans-serif;
-  
+.titulo {
+  font-family: "Montserrat", sans-serif;
 }
 header {
   font-family: "anaglyph", monospace;
   text-shadow: 4px 4px 4px #aaa;
   width: 100%;
-  
+
   background: #9e8ff0;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
@@ -17,9 +15,9 @@ header {
       to right,
       hsla(133, 80%, 38%, 0.059),
       rgba(51, 178, 246, 0.5),
-      hsl(179, 78%, 47%,0.5),
-      rgba(47, 81, 230, 0.5)      
-    ),    
+      hsl(179, 78%, 47%, 0.5),
+      rgba(47, 81, 230, 0.5)
+    ),
     url(header-background.jpeg);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
@@ -31,18 +29,18 @@ header {
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-    100%{
-		background-position: 50% 100%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 header .textos-header {
@@ -50,7 +48,7 @@ header .textos-header {
   height: 1030px;
   width: 100%;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   text-align: center;
 }
 

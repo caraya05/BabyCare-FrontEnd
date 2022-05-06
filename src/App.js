@@ -10,7 +10,7 @@ import Section from "./Section.js";
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">                
+      <div className="App">
         <Home />
         <Section />
       </div>

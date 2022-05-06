@@ -1,60 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:ital,wght@1,900&family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:ital,wght@1,900&family=Righteous&display=swap");
 aside {
-  width: 100%; 
-  height: 100%; 
-  float:right;
-  padding: 30px;    
-  }
-.card1{  
+  width: 100%;
+  height: 100%;
+  float: right;
+  padding: 30px;
+}
+.card1 {
   padding: 5px;
   border-radius: 10px;
-  
 }
 .form-register {
-    width: 100%;
-    height: 100%;
-    background: #438ec8dd;
-    padding: 10px;
-    margin: auto;    
-    border-radius: 6px;
-    color: white;
-    
-  } 
-  .form-register option{
-    background: #438ec8dd;
-  }
-  .form-register .btn{
-    font-family: 'Koulen', cursive;
-    font-size: 2rem;
-  }
-  .form-register h1 {    
-    height: 100%;
-    color: #ffffff;
-    font-family: 'Koulen', cursive;
-    font-size: 4rem;
-  }
-  h1 span {
-    width: 100%;
-    background-image: linear-gradient(to bottom, rgba(172, 106, 172, 0) 50%, #ac6aac 50%, #ac6aac 60%, rgba(172, 106, 172, 0) 60%);
-    background-size: 0 100%;
-    background-repeat: no-repeat;
-    transition: 250ms linear;
-  }
-  h1 span:hover {
-    background-size: 100% 100%;
-  }
-  .controls {
-    width: 100%;
-    background: #438ec8dd;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: none;
-    font-size: 28px;
-    color: rgb(243, 232, 232);
-  }
-  ::placeholder {
-    color: rgb(255, 255, 255);
-    opacity: 0.6; /* Firefox */
-  }  
- 
+  width: 100%;
+  height: 100%;
+  background: #438ec8dd;
+  padding: 10px;
+  margin: auto;
+  border-radius: 6px;
+  color: white;  
+}
+/*h1 span:hover {
+  
+}*/
+
+.form-register:hover h1 span{
+  background-size: 100% 100%;
+}
+.form-register option {
+  background: #438ec8dd;
+}
+.form-register .btn {
+  font-family: "Koulen", cursive;
+  font-size: 2rem;
+}
+.form-register h1 {
+  height: 100%;
+  color: #ffffff;
+  font-family: "Koulen", cursive;
+  font-size: 4rem;
+}
+h1 span {
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(172, 106, 172, 0) 50%,
+    #ffffffa2 50%,
+    #ffffff73 60%,
+    rgba(172, 106, 172, 0) 60%
+  );
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: 250ms linear;
+}
+
+.controls {
+  width: 100%;
+  background: #438ec8dd;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: none;
+  font-size: 28px;
+  color: rgb(243, 232, 232);
+}
+::placeholder {
+  color: rgb(255, 255, 255);
+  opacity: 0.6; /* Firefox */
+}

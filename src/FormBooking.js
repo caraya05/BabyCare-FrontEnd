@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
 import "./Components/form.css";
-
+import { useNavigate } from "react-router-dom";
 
 export default function FormBooking() {
   const [postdata, setPostdata] = useState({
@@ -9,11 +9,10 @@ export default function FormBooking() {
     name: "",
     document: "",
     phone: "",
-    direction: ""
+    direction: "",
   });
 
   const handleChangeSchedule = (event) => {
-      
     setPostdata({
       ...postdata,
       [event.target.name]: event.target.value,
@@ -45,12 +44,16 @@ export default function FormBooking() {
     });
   };
 
-
+  const navigate = useNavigate();
   const handleSubmit = (event) => {
-    console.log(postdata);   
+    console.log(postdata);
     event.preventDefault();
-    axios.post(`https://localhost/api/booking/`, postdata ).then((res) => {
+    axios.post(`https://localhost/api/booking/`, postdata).then((res) => {
       console.log(res);
+      setTimeout(() => {
+        navigate("/");
+        navigate(0);
+      }, 1000); //tiempo para el reload
     });
   };
 
@@ -64,34 +67,64 @@ export default function FormBooking() {
   };
   useEffect(function () {
     fetchdata();
-  }, []);
+  },[]);
   return (
-    
     <aside>
-      
       <div class="card1">
-        
-    <div id={"formulario"} class={"form-register"}>
-      <form onSubmit={handleSubmit}>
-        <h1><span>Reservas</span></h1>
-        <select class="controls" id="schedule" name="schedule" onChange={handleChangeSchedule}>
-            <option disabled selected> Horarios disponibles </option>
-          {data?.map((item) => (
-            <option  key={item.id} name={item.id} value={item.id}>              
-              {item.day} / {item.start_hour} - {item.end_hour}
-            </option>
-          ))}
-        </select>
-        <input class="controls" name="name" onChange={handleChangeName} type="text" placeholder="Nombre"/>
-        <input class="controls" name="document" onChange={handleChangeDocument} type="text" placeholder="Documento" />
-        <input class="controls" name="phone" onChange={handleChangePhone} type="text" placeholder="Telefono" />
-        <input class="controls" name="direction" onChange={handleChangeDirection} type="text" placeholder="Direccion"/>
-        <input class="btn btn-light" type="submit" value="Reservar" />
-        
-      </form>
-    </div>
-    </div>
+        {console.log(data)}
+        <div id={"formulario"} class={"form-register"}>
+          <form onSubmit={handleSubmit}>
+            <h1>
+              <span>Reservas</span>
+            </h1>
+            <select
+              class="controls"
+              id="schedule"
+              name="schedule"
+              onChange={handleChangeSchedule}
+            >
+              <option disabled selected>
+                {" "}
+                Horarios disponibles{" "}
+              </option>
+              {data?.map((item) => (
+                <option key={item.id} name={item.id} value={item.id}>
+                  {item.day} / {item.start_hour} - {item.end_hour}
+                </option>
+              ))}
+            </select>
+            <input
+              class="controls"
+              name="name"
+              onChange={handleChangeName}
+              type="text"
+              placeholder="Nombre"
+            />
+            <input
+              class="controls"
+              name="document"
+              onChange={handleChangeDocument}
+              type="text"
+              placeholder="Documento"
+            />
+            <input
+              class="controls"
+              name="phone"
+              onChange={handleChangePhone}
+              type="text"
+              placeholder="Telefono"
+            />
+            <input
+              class="controls"
+              name="direction"
+              onChange={handleChangeDirection}
+              type="text"
+              placeholder="Direccion"
+            />
+            <input class="btn btn-light" type="submit" value="Reservar" />
+          </form>
+        </div>
+      </div>
     </aside>
-    
   );
 }

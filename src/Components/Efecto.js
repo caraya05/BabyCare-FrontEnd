@@ -1,7 +1,6 @@
 export default function Efecto() {
-    return (
-
-      <div class="container">
+  return (
+    <div class="container">
       <div class="circle-container">
         <div class="circle"></div>
       </div>
@@ -303,5 +302,5 @@ export default function Efecto() {
         <div class="circle"></div>
       </div>
     </div>
-      );
-    }
+  );
+}
