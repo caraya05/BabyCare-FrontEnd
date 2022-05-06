@@ -1,0 +1,74 @@
+
+@import "efecto.css";
+
+.titulo{
+  font-family: 'Montserrat', sans-serif;
+  
+}
+header {
+  font-family: "anaglyph", monospace;
+  text-shadow: 4px 4px 4px #aaa;
+  width: 100%;
+  
+  background: #9e8ff0;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+      to right,
+      hsla(133, 80%, 38%, 0.059),
+      rgba(51, 178, 246, 0.5),
+      hsl(179, 78%, 47%,0.5),
+      rgba(47, 81, 230, 0.5)      
+    ),    
+    url(header-background.jpeg);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-size: 150% 100%;
+  background-attachment: fixed;
+  height: 110vh;
+  position: relative;
+  animation: gradient 20s ease-in-out infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+    100%{
+		background-position: 50% 100%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+header .textos-header {
+  display: flex;
+  height: 1030px;
+  width: 100%;
+  align-items: center;
+  justify-content: center; 
+  text-align: center;
+}
+
+.textos-header h1 {
+  font-size: 800%;
+  text-align: center;
+  color: #fff;
+  text-shadow: -4px 3px 0 #0a1f20, -14px 7px 0 #0a0e27;
+}
+
+.textos-header h2 {
+  font-size: 30px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
